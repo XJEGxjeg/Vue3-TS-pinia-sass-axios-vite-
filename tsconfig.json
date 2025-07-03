@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["vite/client", "pinia"],
+    "moduleResolution": "node", // 添加这个关键选项
+    "allowSyntheticDefaultImports": true, // 允许默认导入
+    // 添加以下缺失的必须选项
+    "target": "es6",
+    "lib": ["es6", "DOM", "ESNext"], // 添加必要的库
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "src/**/*.d.ts"],
+  "exclude": ["node_modules"],  // 建议添加排除项
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
